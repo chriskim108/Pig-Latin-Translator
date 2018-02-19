@@ -8,20 +8,40 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
 <body>
-    <h1>Pig Latin Translator!</h1>
-    <form action="{% url 'translate' %}">
-        <input type="text" name="originalText"/>
-        <br/>
-        <input type="submit" value="Translate!"/>
-    </form>
+    <div class="row">
+        <div class="col-md-12">
+            <h1 class="text-center py-5" style="color:#ebeef4; background: linear-gradient(to right, #00ccff 0%, #0099ff 100%);">Pig Latin Translator!</h1>
+        </div>
+    </div>
+    
+    <div class="card">
+        <div class="card-body">
+            <form action="{% url 'translate' %}">
+                <div class="form-group">
+                    <h3>Input some Text</h3>
+                    <br>
+                    <input type="text" name="originalText" class="form-control"/>
+                </div>
+                    <br>
+                <input class="btn btn-primary" type="submit" value="Translate!"/>
+            </form>
+        </div>
+    </div>
 
     <br>
 
-    <a href="{% url 'about' %}">
-        <button>
-            About Page
-        </button>
-    </a>
+    <div class="card">
+        <div class="card-body">
+            <h3>Other pages to visit</h3>
+            <br>
+            <a class="pb-3" href="{% url 'about' %}">
+                <button class="btn btn-primary">
+                    About Page
+                </button>
+            </a>
+        </div>
+    </div>
+    
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>

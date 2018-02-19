@@ -8,23 +8,44 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
 <body>
-    
-    <h1>Pig Latin Translator!</h1>
+    <div class="row">
+        <div class="col-md-12">
+            <h1 class="text-center py-5" style="color:#ebeef4; background: linear-gradient(to right, #00ccff 0%, #0099ff 100%);">Pig Latin Translator!</h1>
+        </div>
+    </div>
 
-    <h3>Original:</h3>
-    <!-- We are outputting the inputted data text -->
-    <p>{{ originalText }}</p>
+    <div class="card">
+        <div class="card-body">
+            <h3>Original Text:</h3>
+            <br>
+            <p>{{ originalText }}</p>
+        </div>
+    </div>    
 
     <br>
 
-    <h3>Translation:</h3>
-    <p>{{ translationText }}</p>
+    <div class="card">
+        <div class="card-body">
+            <h3>Translation Text:</h3>
+            <br>
+            <p>{{ translationText }}</p>
+        </div>
+    </div>
+
 
     <br>
     <br>
 
-    <a href="{% url 'home' %}">New Translation</a>
-    
+    <div class="card">
+        <div class="card-body">
+            <a href="{% url 'home' %}">
+                <button class="btn btn-primary">
+                    Translate New Text
+                </button> 
+            </a>
+        </div>
+    </div>
+            
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
