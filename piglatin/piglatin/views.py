@@ -6,6 +6,7 @@ def home(request):
 
 def translate(request):
     originalTextValue = request.GET["originalText"]
+
     translationText = ''
 
     for word in originalTextValue.split():
@@ -20,4 +21,6 @@ def translate(request):
                     "originalText":originalTextValue, 
                     "translationText":translationText
                     })
-        
+
+def aboutPage(request):
+    return render(request, 'about.html')
