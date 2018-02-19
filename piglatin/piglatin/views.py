@@ -6,16 +6,18 @@ def home(request):
 
 def translate(request):
     originalTextValue = request.GET["originalText"]
-
-    translation = ''
+    translationText = ''
 
     for word in originalTextValue.split():
-        if word[0] in ["a", "A", "e", "E", "i", "I", "o", "O", "u"]:
-            translation += word
-            translation += 'ay '
+        if word[0] in ["a", "A", "e", "E", "i", "I", "o", "O", "u", "U"]:
+            translationText += word
+            translationText += 'yay '
         else:
-            translation += word[1:]
-            translation += word[0]
-            translation += "ay "
-
-    return HttpResponse(translation)
+            translationText += word[1:]
+            translationText += word[0]
+            translationText += "ay "
+    return render(request, 'translate.html', {
+                    "originalText":originalTextValue, 
+                    "translationText":translationText
+                    })
+        

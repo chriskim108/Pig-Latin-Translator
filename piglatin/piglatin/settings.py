@@ -54,6 +54,7 @@ ROOT_URLCONF = 'piglatin.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        # Redirecting to our HTML file
         'DIRS': ['../templates'],
         'APP_DIRS': True,
         'OPTIONS': {
